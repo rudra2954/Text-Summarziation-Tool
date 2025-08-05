@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Summarization Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Text Summarization App</h1>
+    <form id="summarization-form">
+        <textarea id="text" placeholder="Enter your text here"></textarea>
+        <div>
+            <label><input type="radio" name="method" value="extractive" checked> Extractive</label>
+            <label><input type="radio" name="method" value="abstractive"> Abstractive</label>
+        </div>
+        <button type="button" onclick="summarizeText()">Summarize</button>
+    </form>
+    <h2>Summary:</h2>
+    <div id="summary"></div>
+
+    <script>
+        async function summarizeText() {
+            const text = document.getElementById('text').value;
+            const method = document.querySelector('input[name="method"]:checked').value;
+
+            const response = await fetch('/summarize', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text, method }),
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                document.getElementById('summary').innerText = result.summary;
+            } else {
+                document.getElementById('summary').innerText = result.error;
+            }
+        }
+    </script>
+</body>
+</html>
