@@ -1,5 +1,4 @@
 annotated-types==0.7.0
-blis==0.7.11
 catalogue==2.0.10
 certifi==2025.8.3
 charset-normalizer==3.4.2
@@ -26,7 +25,7 @@ pydantic==2.11.7
 pydantic-core==2.33.2
 requests==2.32.4
 smart-open==6.4.0
-spacy==3.7.4
+spacy==3.7.2
 spacy-legacy==3.0.12
 spacy-loggers==1.0.5
 srsly==2.5.1
