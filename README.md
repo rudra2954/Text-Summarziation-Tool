@@ -1,6 +1,6 @@
 # 🧠 Hybrid Text Summarizer — AI-Powered Text Summarization & Analysis Tool
 
-**Project Combo** is a powerful web-based tool that performs extractive and abstractive summarization using state-of-the-art Natural Language Processing (NLP) techniques. It integrates traditional NLP pipelines via **spaCy** with cutting-edge **pretrained transformer models from Hugging Face**, offering a robust foundation for analyzing and summarizing large volumes of natural language text.
+**It** is a powerful web-based tool that performs extractive and abstractive summarization using state-of-the-art Natural Language Processing (NLP) techniques. It integrates traditional NLP pipelines via **spaCy** with cutting-edge **pretrained transformer models from Hugging Face**, offering a robust foundation for analyzing and summarizing large volumes of natural language text.
 
 ---
 
